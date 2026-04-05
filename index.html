@@ -4,8 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio - แสดงผลงานและทักษะของฉัน">
-    <title>My Portfolio</title>
+    <meta name="description" content="Pratchayawut Thansri — Computer Engineering Student & Full Stack Developer. ดูผลงาน E-commerce, Web App และใบประกาศนียบัตรต่างๆ">
+    <title>Pratchayawut Thansri — Portfolio</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pratchayawut Thansri — Portfolio">
+    <meta property="og:description" content="Computer Engineering Student specializing in Full Stack Web Development">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pratchayawut Thansri — Portfolio">
+    <meta name="twitter:description" content="Computer Engineering Student specializing in Full Stack Web Development">
+    <meta property="og:image" content="S__76390403.jpg">
+    <meta name="twitter:image" content="S__76390403.jpg">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +25,9 @@
 </head>
 
 <body>
+
+    <!-- Skip Navigation -->
+    <a href="#about" class="skip-nav" id="skipNav">Skip to content</a>
 
     <!-- Cursor Glow -->
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -30,7 +44,7 @@
                 <li><a href="#certificates" class="nav-link">Certificates</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -66,36 +80,61 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <p class="section-subtitle">เกี่ยวกับตัวผม</p>
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="S__76390403.jpg" alt="Pratchayawut Thansri" class="about-photo" loading="lazy">
+
+            <div class="about-content">
+                <h3>นักศึกษาวิศวกรรมคอมพิวเตอร์</h3>
+                <p>
+                    สวัสดีครับ!
+                    กระผมเป็นนักศึกษาชั้นปีที่ 3 สาขาวิศวกรรมคอมพิวเตอร์
+                    กำลังมองหาโอกาสในตำแหน่ง Software Developer / Full Stack Developer
+                    เพื่อพัฒนาทักษะด้านการเขียนโปรแกรม การออกแบบระบบ และการพัฒนาแอปพลิเคชัน
+                    โดยมีความสนใจในการประยุกต์ใช้ AI เพื่อเพิ่มประสิทธิภาพ
+                </p>
+                <p>
+                    ผมมีความมุ่งมั่นที่จะพัฒนาตัวเองอยู่เสมอ
+                    และพร้อมที่จะเรียนรู้สิ่งใหม่ๆ อยู่ตลอดเวลา
+                </p>
+                <div class="about-divider"></div>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><span aria-hidden="true">💻</span></div>
+                    <strong>4+ Projects</strong>
+                    <span>ผลงานจริงที่พัฒนาจนสำเร็จ</span>
                 </div>
-                <div class="about-text">
-                    <h3>นักศึกษาวิศวกรรมคอมพิวเตอร์</h3>
-                    <p>
-                        สวัสดีครับ!
-                        กระผมเป็นนักศึกษาชั้นปีที่ 3 สาขาวิศวกรรมคอมพิวเตอร์
-                        กำลังมองหาโอกาสในตำแหน่ง Software Developer / Full Stack Developer
-                        เพื่อพัฒนาทักษะด้านการเขียนโปรแกรม การออกแบบระบบ และการพัฒนาแอปพลิเคชัน
-                        โดยมีความสนใจในการประยุกต์ใช้ AI เพื่อเพิ่มประสิทธิภาพ
-                    </p>
-                    <p>
-                        ผมมีความมุ่งมั่นที่จะพัฒนาตัวเองอยู่เสมอ
-                        และพร้อมที่จะเรียนรู้สิ่งใหม่ๆ อยู่ตลอดเวลา
-                    </p>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <span class="info-label">🎓 การศึกษา</span>
-                            <span class="info-value">มหาวิทยาลัยสยาม คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">📍 ที่อยู่</span>
-                            <span class="info-value">Bangkok, Thailand</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">📧 อีเมล</span>
-                            <span class="info-value">pratchayawutthansri@gmail.com</span>
-                        </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span aria-hidden="true">🛠️</span></div>
+                    <strong>9+ Skills</strong>
+                    <span>เทคโนโลยีที่ใช้งานได้จริง</span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span aria-hidden="true">📜</span></div>
+                    <strong>7 Certificates</strong>
+                    <span>ใบรับรองทักษะและการแข่งขัน</span>
+                </div>
+            </div>
+
+            <div class="about-info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><span aria-hidden="true">🎓</span></div>
+                    <div class="info-detail">
+                        <strong>การศึกษา</strong>
+                        <span>มหาวิทยาลัยสยาม<br>คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><span aria-hidden="true">📍</span></div>
+                    <div class="info-detail">
+                        <strong>ที่อยู่</strong>
+                        <span>Bangkok, Thailand</span>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><span aria-hidden="true">📧</span></div>
+                    <div class="info-detail">
+                        <strong>อีเมล</strong>
+                        <span>pratchayawutthansri@gmail.com</span>
                     </div>
                 </div>
             </div>
@@ -181,7 +220,7 @@
                         <img src="https://img.youtube.com/vi/YO9uCPMsPuA/maxresdefault.jpg"
                             alt="Xivex – Fashion E-commerce Platform" class="project-thumbnail" loading="lazy"
                             width="600" height="338">
-                        <div class="project-play-btn">▶</div>
+                        <div class="project-play-btn" aria-hidden="true">▶</div>
                     </a>
                     <div class="project-info">
                         <h3>Xivex – Fashion E-commerce Platform</h3>
@@ -196,13 +235,13 @@
                         <div class="project-links">
                             <a href="https://youtu.be/YO9uCPMsPuA?si=N0HW4ZrNiLsw8anv" target="_blank"
                                 rel="noopener noreferrer" class="project-link">🎬 ดูคลิปนำเสนอ</a>
-                            <a href="https://github.com/pratchayawutthansri-commits" target="_blank"
+                            <a href="https://github.com/pratchayawutthansri" target="_blank"
                                 rel="noopener noreferrer" class="project-link">📁 GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <a href="https://github.com/pratchayawutthansri-commits/-my-system-dormitory" target="_blank"
+                    <a href="https://github.com/pratchayawutthansri/-my-system-dormitory" target="_blank"
                         rel="noopener noreferrer" class="project-image">
                         <img src="Screenshot 2026-02-25 172510.png" alt="ระบบจัดการการจองหอพัก"
                             class="project-thumbnail" loading="lazy" width="600" height="338">
@@ -218,13 +257,13 @@
                             <span class="tag">HTML</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/pratchayawutthansri-commits/-my-system-dormitory"
+                            <a href="https://github.com/pratchayawutthansri/-my-system-dormitory"
                                 target="_blank" rel="noopener noreferrer" class="project-link">📁 GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <a href="https://github.com/pratchayawutthansri-commits/Valentine-s-Day" target="_blank"
+                    <a href="https://github.com/pratchayawutthansri/Valentine-s-Day" target="_blank"
                         rel="noopener noreferrer" class="project-image">
                         <img src="Screenshot 2026-02-25 172950.jpg" alt="Valentine's Day Card Randomizer"
                             class="project-thumbnail" loading="lazy" width="600" height="338">
@@ -241,7 +280,7 @@
                         <div class="project-links">
                             <a href="https://valentine-s-day-s33a.onrender.com/" target="_blank"
                                 rel="noopener noreferrer" class="project-link">🔗 Live Demo</a>
-                            <a href="https://github.com/pratchayawutthansri-commits/Valentine-s-Day" target="_blank"
+                            <a href="https://github.com/pratchayawutthansri/Valentine-s-Day" target="_blank"
                                 rel="noopener noreferrer" class="project-link">📁 GitHub</a>
                         </div>
                     </div>
@@ -352,7 +391,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section section-alt" id="contact">
+    <section class="section" id="contact">
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <p class="section-subtitle">ติดต่อผม</p>
@@ -366,7 +405,7 @@
                     <strong>Email</strong>
                     <span class="contact-text">pratchayawutthansri@gmail.com</span>
                 </a>
-                <a href="tel:064-338-3495" class="contact-card">
+                <a href="tel:+66643383495" class="contact-card">
                     <span class="contact-icon" aria-hidden="true">📱</span>
                     <strong>Phone</strong>
                     <span class="contact-text">064-338-3495</span>
@@ -378,7 +417,7 @@
                 </div>
             </div>
             <div class="social-links">
-                <a href="https://github.com/pratchayawutthansri-commits" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/pratchayawutthansri" target="_blank" rel="noopener noreferrer"
                     class="social-link" aria-label="GitHub">
                     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                         <path
@@ -404,8 +443,8 @@
     </section>
 
     <!-- Certificate Lightbox Modal -->
-    <div class="lightbox-overlay" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
         <img src="" alt="Certificate" class="lightbox-img" id="lightboxImg">
     </div>
 
@@ -420,47 +459,79 @@
     </footer>
 
     <script>
-        /* ── Navbar scroll effect ── */
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        /* ── Mobile menu toggle ── */
+        /* ── Cached DOM References ── */
+        const navbar = document.getElementById('navbar');
         const navToggle = document.getElementById('navToggle');
         const navLinks = document.getElementById('navLinks');
+        const backToTop = document.getElementById('backToTop');
+        const sections = document.querySelectorAll('section');
+        const allNavLinks = document.querySelectorAll('.nav-link');
+        const cursorGlow = document.getElementById('cursorGlow');
+        const canvas = document.getElementById('heroParticles');
+        const ctx = canvas ? canvas.getContext('2d') : null;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        /* ── Throttled Scroll Handler (rAF for performance) ── */
+        let scrollTicking = false;
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+
+                    // Navbar scroll effect
+                    navbar.classList.toggle('scrolled', scrollY > 50);
+
+                    // Active nav link on scroll (uses cached allNavLinks)
+                    let current = '';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop - 100;
+                        if (scrollY >= sectionTop) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+                    allNavLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + current) {
+                            link.classList.add('active');
+                        }
+                    });
+
+                    // Back to top button
+                    backToTop.classList.toggle('active', scrollY > 500);
+
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        });
+
+        /* ── Mobile menu toggle (with aria-expanded) ── */
         navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            const isOpen = navLinks.classList.toggle('active');
             navToggle.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isOpen);
         });
 
         /* ── Close mobile menu on link click ── */
-        document.querySelectorAll('.nav-link').forEach(link => {
+        allNavLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
-        /* ── Smooth scroll (CSS natively handles this now) ── */
-        // Removed JS smooth scroll to prevent conflicts with CSS `scroll-behavior: smooth`.
-
-        /* ── Active nav link on scroll ── */
-        const sections = document.querySelectorAll('section');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
+        /* ── Close mobile menu on outside click ── */
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') &&
+                !navLinks.contains(e.target) &&
+                !navToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
         });
 
         /* ── Scroll reveal animation ── */
@@ -473,17 +544,18 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.project-card, .about-grid, .contact-cards, .certificate-card').forEach(el => {
+        document.querySelectorAll('.project-card, .about-content, .stat-card, .info-card, .contact-cards, .certificate-card').forEach(el => {
             el.classList.add('reveal');
             observer.observe(el);
         });
 
         /* ── Hero Particles Simulation ── */
-        const canvas = document.getElementById('heroParticles');
-        const ctx = canvas.getContext('2d');
         let particles = [];
+        let particlesRunning = false;
+        let animFrameId = null;
 
         function initParticles() {
+            if (!ctx) return;
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             particles = [];
@@ -500,8 +572,9 @@
         }
 
         function animateParticles() {
+            if (!particlesRunning || !ctx) return;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = 'rgba(0, 212, 255, 0.2)';
+            ctx.fillStyle = 'rgba(200, 169, 126, 0.15)';
             particles.forEach(p => {
                 p.x += p.vx;
                 p.y += p.vy;
@@ -511,8 +584,23 @@
                 ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                 ctx.fill();
             });
-            requestAnimationFrame(animateParticles);
+            animFrameId = requestAnimationFrame(animateParticles);
         }
+
+        /* ── Pause particles when Hero is off-screen ── */
+        const heroSection = document.getElementById('hero');
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    particlesRunning = true;
+                    animateParticles();
+                } else {
+                    particlesRunning = false;
+                    if (animFrameId) cancelAnimationFrame(animFrameId);
+                }
+            });
+        }, { threshold: 0 });
+        heroObserver.observe(heroSection);
 
         /* ── Debounce Resize for Performance ── */
         let resizeTimeout;
@@ -522,11 +610,11 @@
         });
 
         initParticles();
-        animateParticles();
+        /* animateParticles() removed — heroObserver handles start/stop */
 
         /* ── Cursor Glow Tracking ── */
-        const cursorGlow = document.getElementById('cursorGlow');
         document.addEventListener('mousemove', (e) => {
+            if (lightbox.classList.contains('active')) return;
             cursorGlow.style.left = e.clientX + 'px';
             cursorGlow.style.top = e.clientY + 'px';
             if (!cursorGlow.classList.contains('active')) {
@@ -538,16 +626,26 @@
         });
 
         /* ── Certificate Lightbox ── */
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const lightboxClose = document.getElementById('lightboxClose');
-
         document.querySelectorAll('.certificate-thumbnail').forEach(img => {
-            img.addEventListener('click', () => {
+            img.setAttribute('tabindex', '0');
+            img.setAttribute('role', 'button');
+            img.setAttribute('aria-label', 'View ' + img.alt);
+
+            function openLightbox() {
                 lightboxImg.src = img.src;
                 lightboxImg.alt = img.alt;
                 lightbox.classList.add('active');
+                cursorGlow.classList.remove('active');
                 document.body.style.overflow = 'hidden';
+                lightboxClose.focus();
+            }
+
+            img.addEventListener('click', openLightbox);
+            img.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox();
+                }
             });
         });
 
@@ -560,16 +658,8 @@
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();
         });
-        /* ── Back to Top ── */
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTop.classList.add('active');
-            } else {
-                backToTop.classList.remove('active');
-            }
-        });
 
+        /* ── Back to Top ── */
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
