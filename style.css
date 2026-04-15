@@ -529,10 +529,14 @@ img {
     align-items: center;
     text-align: center;
     gap: 12px;
-    padding: 32px 20px;
-    background: rgba(200, 169, 126, 0.03);
-    border: 1px solid rgba(200, 169, 126, 0.06);
-    border-radius: 16px;
+    padding: 36px 24px;
+    background: linear-gradient(145deg, rgba(24, 24, 26, 0.6) 0%, rgba(6, 6, 6, 0.9) 100%);
+    border: 1px solid rgba(200, 169, 126, 0.08);
+    border-top: 1px solid rgba(200, 169, 126, 0.2);
+    box-shadow: inset 0 1px 15px rgba(200, 169, 126, 0.02), 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 18px;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
@@ -541,57 +545,64 @@ img {
 .stat-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    transform: scaleX(0);
-    transform-origin: left;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(200, 169, 126, 0.15) 0%, transparent 60%);
+    opacity: 0;
     transition: var(--transition);
+    pointer-events: none;
 }
 
 .stat-card:hover {
-    background: rgba(200, 169, 126, 0.06);
-    border-color: rgba(200, 169, 126, 0.15);
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(200, 169, 126, 0.08);
+    background: linear-gradient(145deg, rgba(30, 30, 32, 0.8) 0%, rgba(10, 10, 12, 1) 100%);
+    border-color: rgba(200, 169, 126, 0.25);
+    border-top-color: rgba(200, 169, 126, 0.4);
+    transform: translateY(-8px);
+    box-shadow: inset 0 1px 25px rgba(200, 169, 126, 0.05), 0 16px 45px rgba(200, 169, 126, 0.1);
 }
 
 .stat-card:hover::before {
-    transform: scaleX(1);
+    opacity: 1;
 }
 
 .stat-icon {
-    font-size: 1.5rem;
-    width: 52px;
-    height: 52px;
+    font-size: 1.6rem;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(200, 169, 126, 0.08);
-    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 1));
+    border: 1px solid rgba(200, 169, 126, 0.15);
+    box-shadow: inset 0 0 15px rgba(200, 169, 126, 0.05), 0 6px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
     transition: var(--transition);
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 1;
 }
 
 .stat-card:hover .stat-icon {
-    background: linear-gradient(135deg, rgba(200, 169, 126, 0.2), rgba(232, 213, 181, 0.15));
-    transform: scale(1.1);
-    box-shadow: 0 4px 16px rgba(200, 169, 126, 0.15);
+    background: linear-gradient(135deg, rgba(200, 169, 126, 0.1), rgba(200, 169, 126, 0.02));
+    border-color: rgba(200, 169, 126, 0.4);
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: inset 0 0 20px rgba(200, 169, 126, 0.15), 0 10px 25px rgba(200, 169, 126, 0.2);
 }
 
 .stat-card strong {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--primary);
-    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(135deg, #E8D5B5 0%, #C8A97E 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .stat-card span:last-child {
     color: var(--text-light);
-    font-size: 0.82rem;
-    line-height: 1.5;
+    font-size: 0.85rem;
+    line-height: 1.6;
 }
 
 /* ── Info Grid Cards ── */
@@ -604,37 +615,64 @@ img {
 .info-card {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
-    padding: 24px;
-    background: rgba(200, 169, 126, 0.02);
+    gap: 18px;
+    padding: 28px;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.5) 0%, rgba(5, 5, 5, 0.8) 100%);
     border: 1px solid rgba(200, 169, 126, 0.06);
-    border-radius: 14px;
+    border-top: 1px solid rgba(200, 169, 126, 0.15);
+    box-shadow: inset 0 1px 10px rgba(200, 169, 126, 0.02), 0 6px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(200, 169, 126, 0.08) 0%, transparent 50%);
+    opacity: 0;
+    transition: var(--transition);
+    pointer-events: none;
 }
 
 .info-card:hover {
-    border-color: rgba(200, 169, 126, 0.15);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(200, 169, 126, 0.06);
+    background: linear-gradient(145deg, rgba(25, 25, 25, 0.7) 0%, rgba(8, 8, 8, 0.9) 100%);
+    border-color: rgba(200, 169, 126, 0.2);
+    border-top-color: rgba(200, 169, 126, 0.35);
+    transform: translateY(-5px);
+    box-shadow: inset 0 1px 15px rgba(200, 169, 126, 0.04), 0 12px 35px rgba(200, 169, 126, 0.08);
+}
+
+.info-card:hover::after {
+    opacity: 1;
 }
 
 .info-icon {
-    font-size: 1.2rem;
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
+    font-size: 1.4rem;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(200, 169, 126, 0.08);
-    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.9), rgba(5, 5, 5, 1));
+    border: 1px solid rgba(200, 169, 126, 0.12);
+    box-shadow: inset 0 0 12px rgba(200, 169, 126, 0.05), 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 14px;
     transition: var(--transition);
+    position: relative;
+    z-index: 1;
 }
 
 .info-card:hover .info-icon {
-    background: linear-gradient(135deg, #C8A97E, #A6894E);
-    transform: scale(1.08);
-    box-shadow: 0 4px 12px rgba(200, 169, 126, 0.2);
+    background: linear-gradient(135deg, rgba(200, 169, 126, 0.15), rgba(200, 169, 126, 0.05));
+    border-color: rgba(200, 169, 126, 0.3);
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: inset 0 0 15px rgba(200, 169, 126, 0.1), 0 8px 20px rgba(200, 169, 126, 0.2);
 }
 
 .info-detail {
@@ -644,9 +682,12 @@ img {
 }
 
 .info-detail strong {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(135deg, #E8D5B5 0%, #C8A97E 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
@@ -1115,13 +1156,16 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
-    padding: 36px 20px;
-    background: rgba(200, 169, 126, 0.02);
-    border: 1px solid rgba(200, 169, 126, 0.06);
-    border-radius: 16px;
+    gap: 16px;
+    padding: 42px 24px;
+    background: linear-gradient(145deg, rgba(24, 24, 26, 0.6) 0%, rgba(6, 6, 6, 0.9) 100%);
+    border: 1px solid rgba(200, 169, 126, 0.08);
+    border-top: 1px solid rgba(200, 169, 126, 0.2);
+    box-shadow: inset 0 1px 15px rgba(200, 169, 126, 0.02), 0 8px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
     transition: var(--transition);
-
     text-decoration: none;
     color: inherit;
     position: relative;
@@ -1132,15 +1176,18 @@ img {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(200, 169, 126, 0.04), rgba(232, 213, 181, 0.04));
+    background: radial-gradient(circle at 50% 0%, rgba(200, 169, 126, 0.15) 0%, transparent 60%);
     opacity: 0;
     transition: var(--transition);
+    pointer-events: none;
 }
 
 .contact-card:hover {
-    border-color: rgba(200, 169, 126, 0.15);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(200, 169, 126, 0.06);
+    background: linear-gradient(145deg, rgba(30, 30, 32, 0.8) 0%, rgba(10, 10, 12, 1) 100%);
+    border-color: rgba(200, 169, 126, 0.25);
+    border-top-color: rgba(200, 169, 126, 0.4);
+    transform: translateY(-8px);
+    box-shadow: inset 0 1px 25px rgba(200, 169, 126, 0.05), 0 16px 45px rgba(200, 169, 126, 0.1);
 }
 
 .contact-card:hover::before {
@@ -1148,14 +1195,16 @@ img {
 }
 
 .contact-icon {
-    font-size: 1.4rem;
-    width: 52px;
-    height: 52px;
+    font-size: 1.6rem;
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(200, 169, 126, 0.08);
-    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(10, 10, 10, 1));
+    border: 1px solid rgba(200, 169, 126, 0.15);
+    box-shadow: inset 0 0 15px rgba(200, 169, 126, 0.05), 0 6px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 18px;
     flex-shrink: 0;
     transition: var(--transition);
     position: relative;
@@ -1163,16 +1212,20 @@ img {
 }
 
 .contact-card:hover .contact-icon {
-    background: linear-gradient(135deg, #C8A97E, #A6894E);
-    transform: scale(1.08);
-    box-shadow: 0 4px 16px rgba(200, 169, 126, 0.2);
+    background: linear-gradient(135deg, rgba(200, 169, 126, 0.15), rgba(200, 169, 126, 0.05));
+    border-color: rgba(200, 169, 126, 0.4);
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: inset 0 0 20px rgba(200, 169, 126, 0.15), 0 10px 25px rgba(200, 169, 126, 0.25);
 }
 
 .contact-card strong {
     display: block;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--text-bright);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(135deg, #E8D5B5 0%, #C8A97E 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
     position: relative;
     z-index: 1;
     letter-spacing: 1px;
